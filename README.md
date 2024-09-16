@@ -1,5 +1,98 @@
 # Monitoria - Backend 2024.1
 
+## Construção de uma API RESTful para Gerenciamento de Livraria
+
+### Objetivo:
+
+Desenvolver uma API RESTful para gerenciar o catálogo de uma livraria. O foco será em aplicar os conceitos de CRUD (Create, Read, Update, Delete), além de garantir a organização modular do código e uso correto de um banco de dados.
+
+### Descrição da Tarefa:
+
+A API deve permitir as seguintes operações:
+
+1. **Cadastrar um livro**: Um livro deve conter título, autor, gênero, ano de publicação, e quantidade em estoque.
+2. **Listar todos os livros**: A API deve retornar todos os livros cadastrados.
+3. **Buscar um livro por ID**: A API deve retornar os detalhes de um livro específico usando o ID.
+4. **Atualizar informações de um livro**: Permitir atualizar as informações de um livro específico (título, autor, gênero, etc.).
+5. **Remover um livro**: Permitir a exclusão de um livro do catálogo usando o ID.
+6. **Pesquisar por gênero**: Implementar uma funcionalidade que permita filtrar os livros pelo gênero.
+
+### Tecnologias utilizadas:
+
+- **Linguagem**: JavaScript
+- **Framework**: Express
+- **Banco de dados**: MongoDB
+- **Testes**: Jest
+
+## Estrutura 
+
+````
+src/
+│
+├── main/
+│   ├── controllers/
+│   │   └── bookController.js  # Lógica para manipulação de livros (CRUD)
+│   │
+│   ├── models/
+│   │   └── bookModel.js       # Modelo do livro (definição do esquema do MongoDB)
+│   │
+│   ├── routes/
+│   │   └── bookRoutes.js      # Definição das rotas da API
+│   │
+│   └── app.js                 # Configuração do servidor Express
+└── tests/
+    └── book.test.js       # Testes unitários 
+package.json           # Dependências e scripts do projeto
+README.md              # Instruções de uso do projeto
+````
+
+## Inicializando 
+
+### Pré-requisitos
+
+Antes de começar, você precisará ter as seguintes ferramentas instaladas no seu computador:
+
+1. Node.js
+2. MongoDB
+3. Um editor de código (ex.: VSCode)
+
+### Rodando projeto localmente
+
+#### 1. Clone o repositório
+
+````
+https://github.com/bomday/mntr-be-24.1
+````
+
+#### 2. Instale as dependências no diretório do projeto
+
+````
+npm install
+````
+````
+npm install express mongoose
+````
+````
+npm install --save-dev nodemon jest supertest
+````
+````
+npm install dotenv
+````
+
+#### 3. Crie o arquivo _dotenv_ no mesmo local que o arquivo _package.json_
+
+````
+MONGODB_URI = URI de conexão com o MongoDB
+PORT = porta de conexão
+````
+
+#### 4. Execute o projeto
+
+````
+npm start
+
+````
+
 ## Material de Apoio
 
 [Uma visão geral do HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
